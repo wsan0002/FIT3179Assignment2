@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "Bar chart with text labels. Apply scale padding to make the frame cover the labels.",
+  "height": 250,
+  "width": 300,
+  "title": "World happiness score distrbution in 2020 ",
+  "data": {
+    "url": "https://raw.githubusercontent.com/wsan0002/FIT3179Homework4/main/WHR20_DataForFigure2.1.csv"
+  },
+  "encoding": {
+    "y": {
+      "field": "Ladder score",
+      "type": "quantitative",
+      "scale": {"padding": 10},
+      "bin": true,
+      "title": "Ladder score"
+    },
+    "x": {"aggregate": "count", "title": "Number of countries"},
+    "color": {"value": "#f16913"}
+  },
+  "layer": [
+    {"mark": "bar"},
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 3,
+        "color": "black"
+      },
+      "encoding": {
+        "text": {"aggregate": "count", "type": "quantitative"},
+        "tooltip": [
+          {
+            "field": "bin_maxbins_10_Ladder score",
+            "title": "Happiness score lower bound"
+          },
+          {
+            "field": "bin_maxbins_10_Ladder score_end",
+            "title": "Happiness score upper bound"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {}
+}
