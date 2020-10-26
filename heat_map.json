@@ -1,0 +1,61 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/wsan0002/FIT3179Homework4/main/WHR20_DataForFigure2.1.csv"
+  },
+  "height": 250,
+  "width": 250,
+  "title": "Happiness score relation with life expectany and social support",
+  "mark": "rect",
+  "encoding": {
+    "y": {
+      "field": "Healthy life expectancy",
+      "type": "quantitative",
+      "bin": {"maxbins": 10},
+      "title": "Life expectancy (years)"
+    },
+    "x": {
+      "field": "Social support",
+      "type": "quantitative",
+      "bin": {"maxbins": 10},
+      "title": "Social support"
+    },
+    "color": {
+      "field": "Ladder score",
+      "type": "quantitative",
+      "scale": {
+        "range": [
+          "#f7fcfd",
+          "#e5f5f9",
+          "#ccece6",
+          "#99d8c9",
+          "#66c2a4",
+          "#41ae76",
+          "#238b45",
+          "#005824"
+        ]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Healthy life expectancy",
+        "type": "ordinal",
+        "title": "Life expectancy",
+        "format": ".2f"
+      },
+      {
+        "field": "Social support",
+        "type": "ordinal",
+        "title": "Social support score",
+        "format": ".2f"
+      },
+      {
+        "field": "Ladder score",
+        "type": "quantitative",
+        "title": "Ladder score",
+        "format": ".2f"
+      }
+    ]
+  },
+  "config": {"axis": {"grid": true, "tickBand": "extent"}}
+}
