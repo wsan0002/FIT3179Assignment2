@@ -23,6 +23,7 @@
     "color": {
       "field": "Ladder score",
       "type": "quantitative",
+      "title": "Happiness Score",
       "scale": {
         "range": [
           "#f7fcfd",
