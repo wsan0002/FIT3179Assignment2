@@ -46,6 +46,7 @@
     "color": {
       "field": "Ladder score",
       "type": "quantitative",
+      "title":"Happiness Score",
       "scale": {
       "type": "threshold",
       "domain": [1,2,3,4,5,6,7],
