@@ -10,7 +10,7 @@
   "mark": "point",
   "encoding": {
     "x": {"field":"Social support" , "type": "quantitative"},
-    "y": {"field": "Ladder score", "type": "quantitative"},
+    "y": {"field": "Ladder score", "type": "quantitative","title":"Happiness Score"},
     "size": {"field": "Freedom to make life choices", "type": "quantitative"},
     "color":{"field":"Healthy life expectancy", "type":"quantitative"},
  "tooltip": [{
