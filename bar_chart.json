@@ -13,8 +13,8 @@
       "type": "quantitative",
       "title": "Happiness Score",
       "scale": {"padding": 10},
-      "bin": true,
-      "title": "Ladder score"
+      "bin": true
+ 
     },
     "x": {"aggregate": "count", "title": "Number of countries"},
     "color": {"value": "#f16913"}
