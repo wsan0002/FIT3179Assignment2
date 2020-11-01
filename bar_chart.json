@@ -11,6 +11,7 @@
     "y": {
       "field": "Ladder score",
       "type": "quantitative",
+      "title": "Happiness Score",
       "scale": {"padding": 10},
       "bin": true,
       "title": "Ladder score"
