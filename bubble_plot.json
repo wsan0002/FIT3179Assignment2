@@ -1,0 +1,39 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "A bubbleplot showing horsepower on x, miles per gallons on y, and binned acceleration on size.",
+  "data": {"url": "https://raw.githubusercontent.com/wsan0002/FIT3179Homework4/main/WHR20_DataForFigure2.1.csv"},
+  "title": "Differences between countries with high and low happiness score",
+  "width":500,
+  "height":300,
+  "transform": [{"filter": {"or":[{"field": "Ladder score", "gte":7},
+    {"field": "Ladder score", "lte":4}]}}],
+  "mark": "point",
+  "encoding": {
+    "x": {"field":"Social support" , "type": "quantitative"},
+    "y": {"field": "Ladder score", "type": "quantitative"},
+    "size": {"field": "Freedom to make life choices", "type": "quantitative"},
+    "color":{"field":"Healthy life expectancy", "type":"quantitative"},
+ "tooltip": [{
+        "type": "nominal",
+        "field": "Country name"
+      },
+      {
+        "type": "quantitative",
+        "field": "Ladder score"
+      },
+        {
+        "type": "quantitative",
+        "field": "Freedom to make life choices", 
+        "format":".3f"
+        
+      }, {
+        "type": "quantitative",
+        "field": "Healthy life expectancy",
+         "format":".2f"
+       
+      }, {
+        "type": "quantitative",
+        "field": "Social support",
+         "format":".2f"
+      }]
+}}
